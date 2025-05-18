@@ -69,9 +69,9 @@ function App() {
   }
 
   return (
-    <div className='App text-center p-4 space-y-6'>
-      <h1 className="text-3xl font-bold mb-4">Weather App</h1>
-      <div className='search-container flex flex-col items-center gap-4'>
+    <div className='text-center p-4 space-y-6'>
+      <h1 className="text-5xl font-bold mb text-blue-600">Weather App</h1>
+      <div className='flex flex-col items-center gap-4'>
         <SearchBox
           city={city}
           setCity={setCity}
@@ -79,6 +79,7 @@ function App() {
           suggestions={suggestions}
           setSuggestions={setSuggestions}
         />
+
         <button
           disabled={!city}
           onClick={fetchWeather}
@@ -89,6 +90,17 @@ function App() {
       </div>
 
       <CountryWeather countries={countries} />
+      
+      <button
+  onClick={() => {
+    setCountries({});
+    localStorage.removeItem('weatherCountries');
+  }}
+  className="bg-red-500 text-white px-4 py-2 rounded"
+>
+  Reset All
+</button>
+
     </div>
   )
 }

@@ -1,4 +1,3 @@
-// src/components/CountryWeather.jsx
 import React from 'react';
 
 const CountryWeather = ({ countries }) => {
