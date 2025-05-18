@@ -33,7 +33,7 @@ function App() {
 
 
   const addCityWeather = (cityData) => {
-    const country = cityData.sys.country;
+    const country = cityData.sys.country
     const city = cityData.name;
 
     setCountries(prev => {
